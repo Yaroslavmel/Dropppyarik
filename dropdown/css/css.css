@@ -1,0 +1,76 @@
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #c7b39b url(https://www.crushpixel.com/big-static16/preview4/beer-seamless-texture-beer-background-2347383.jpg);
+}
+div {background: #6e6d6a;}
+div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+div ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+  width: 200px;
+  height: 30px;
+}
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 2px solid black;
+}
+.topmenu > li:first-child {border-left: 0;}
+.topmenu > li > a {  
+  padding: 20px 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #FEFDFD;
+  letter-spacing: 2px;
+}
+.topmenu > li > a.active, 
+.submenu a:hover {color: #ddbe86;}
+.topmenu .fa, 
+.submenu .fa {
+  margin-left: 5px;
+  color: inherit;
+}
+.submenu {
+  position: absolute;
+  z-index: 5;
+  min-width: 259px;
+  background: white;
+  border-top: 1px solid #CBCBCC;
+  border-left: 1px solid #CBCBCC;
+  border-right: 1px solid #CBCBCC;
+  visibility: hidden;
+  opacity: 0; 
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;  
+}
+.submenu li {position: relative;}
+.submenu li a {
+  color: #282828;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-bottom: 2px solid #CBCBCC;
+}
+.submenu .submenu {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  transition: .3s linear;
+}
+div li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
